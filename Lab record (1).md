@@ -21,8 +21,10 @@
    | $ls   | list files in a directory |
    |$ ls -l or ll| provide long listing of all the files |
    | $ls -l -h    | provides sizes in human readable form |
- | $ls   -F   |mark all executables with * and directories with / |
-    |$ls -a | show all files in the present directory |
+   | $ls   -F   | mark all executables with * and directories with |
+   |$ls -a | show all files in the present directory |
+   
+   
 #### Output
 
 ![N|Solid](https://github.com/ebinbabu/CET/blob/master/lab1.png?raw=true)
