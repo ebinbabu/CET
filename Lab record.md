@@ -19,21 +19,21 @@
    | $ls   | list files in a directory |
    |$ ls -l or ll| provide long listing of all the files |
    | $ls -l -h    | provides sizes in human readable form |
- | $ls   -F   | mark all executables with * and directories with / |
-    |$ls -a | show all files in the present directory |
-    |$cp file1 file2 | copying files |
-    |$cp -r dir1 dir2 | copy directories |
-    | $rm filename | remove a file |
-    | $rm -r directory name| remove directory |
-    |$ clear | clear the contents of the terminal |
-    |$locate | search for a specified filename |
-    |$man  |commandname view help of the specified command name |
-    |$chmod [who what which] filename |  change file permissions |
-    |$chown username:groupname filename |  change ownership file or directory |
-    | $kill [options] pid | Kill a process|
-    |$who [options]  | Display who is logged in |
-    |$top  | Display the resources being used in your system  |
-    |$ln [options] source desitination | Create a shortcut |
+   | $ls   -F   | mark all executables with * and directories with / |
+   |$ls -a | show all files in the present directory |
+   |$cp file1 file2 | copying files |
+   |$cp -r dir1 dir2 | copy directories |
+   | $rm filename | remove a file |
+   | $rm -r directory name| remove directory |
+   |$ clear | clear the contents of the terminal |
+   |$locate | search for a specified filename |
+   |$man  |commandname view help of the specified command name |
+   |$chmod [who what which] filename |  change file permissions |
+   |$chown username:groupname filename |  change ownership file or directory |
+   | $kill [options] pid | Kill a process|
+   |$who [options]  | Display who is logged in |
+   |$top  | Display the resources being used in your system  |
+   |$ln [options] source desitination | Create a shortcut |
     
   ### 1.3 Directory Structure in Linux
 
