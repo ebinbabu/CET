@@ -46,7 +46,7 @@
 ![Lab1](https://github.com/ebinbabu/CET/blob/master/lab1.png?raw=true)
 ![N|Solid](https://github.com/ebinbabu/CET/blob/master/lab2.png?raw=true)
 ![N|Solid](https://github.com/ebinbabu/CET/blob/master/lab3.png?raw=true)
-[lab4](https://raw.githubusercontent.com/ebinbabu/CET/master/lab4.png)
+![lab4](https://raw.githubusercontent.com/ebinbabu/CET/master/lab4.png)
 
 
 
