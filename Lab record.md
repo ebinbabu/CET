@@ -43,8 +43,10 @@
    ![N|Solid](https://github.com/ebinbabu/CET/blob/master/filesystem.png.png?raw=true)
   ### 1.4  Output
 
-![N|Solid](https://github.com/ebinbabu/CET/blob/master/lab1.png?raw=true)
+![Lab1](https://github.com/ebinbabu/CET/blob/master/lab1.png?raw=true)
 ![N|Solid](https://github.com/ebinbabu/CET/blob/master/lab2.png?raw=true)
+![N|Solid](https://github.com/ebinbabu/CET/blob/master/lab3.png?raw=true)
+
 
 
 
