@@ -53,3 +53,35 @@
 
   ### 1.6 Result
 #####  Several basic linux commands and the direcotry structure of linux were studied
+
+
+
+
+
+
+##### Experiment No:2
+
+##   Linux commands for operations such as redirection, pipes,filters,job control
+
+
+>  ### 2.1   Aim
+Linux commands for operations such as redirection, pipes, filters, job control
+
+>  ### 2.2 Redirection of standard Input/Output
+
+> By default most command line programs send their output to the standard
+output which by default displays it on the
+```sh
+commandName >fileName -Overwrites the file with the output of
+the command
+commandName >>fileName - appends the file with the output of
+the command.
+```
+> Most of the command line programs accept its input from the standard
+input and by default gets its contents from the keyboard. Similar to
+standard output it can also be redirected.
+sort < filename - sort command processes the contents of the file with the
+name filename.
+sort < file1 > file2 processes the contents of file 1 and redirects its
+output to file 2
+
