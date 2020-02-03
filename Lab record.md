@@ -26,7 +26,7 @@
    | $rm filename | remove a file |
    | $rm -r directory name| remove directory |
    |$ clear | clear the contents of the terminal |
-   |$locate | search for a specified filename |
+   |$locate | find files by name |
    |$man  |commandname view help of the specified command name |
    |$chmod [who what which] filename |  change file permissions |
    |$chown username:groupname filename |  change ownership file or directory |
