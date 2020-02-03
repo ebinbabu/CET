@@ -44,7 +44,7 @@
   ### 1.4  Output
 
 ![N|Solid](https://github.com/ebinbabu/CET/blob/master/lab1.png?raw=true)
-![N|Solid](https://github.com/ebinbabu/CET/blob/master/Screenshot%20from%202020-01-31%2013-15-10.png?raw=true)
+![N|Solid](https://raw.githubusercontent.com/ebinbabu/CET/master/lab2.png)
 
 
 
