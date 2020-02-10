@@ -164,6 +164,8 @@ $ fg - used to put a process in foreground
 
 Table 3: Permissions
 
+| Command | Operation |
+| -------- | --------- |
 | chmod | modify file access rights |
 | su | become super user |
 | chown | change file ownership |
