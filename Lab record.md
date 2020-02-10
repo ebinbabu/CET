@@ -159,3 +159,103 @@ $ kill -s SIGKILL pid’ is used to send SIGKILL signal to process with process 
 $ jobs lists the jobs that the current shell is managing.
 $ bg - used to put a process in background.
 $ fg - used to put a process in foreground
+```
+>  ### 2.6 Permissions
+
+Table 3: Permissions
+
+| chmod | modify file access rights |
+| su | become super user |
+| chown | change file ownership |
+| chgrp | change file group ownership |
+
+>  ### 2.7 Links
+A link provides a connection between files. This provides the ability to have a
+single file or directory referred to through different names.
+The nearest comparison with the Windows world is of a shortcut, but that
+is an unfair comparison as a link in Linux is far more powerful. A Windows
+shortcut is just a way of launching a file from a different place, whereas a link
+can make a file appear in multiple locations which is invisible to the applications.
+There are two types of links that can be created. The first is a hard link
+and the other is a soft link (sometimes called symbolic link or symlink). The
+command to create these is the same - ln.
+- Hard Link A hard link creates a second file that refers to the same file
+on the physical disk. This is achieved by having two filenames that point
+directly at the same file. This is normally used where file entries (links)
+are on the same filesystem. When a hard link is created then all the
+names that link to that file are given the same status. Deleting one of
+the files will break the link, but the file can still exist under the other
+linked filenames. This works by maintaining a counter of the number of
+filenames that the file has. When the number of filenames reaches zero
+then the file is considered to be deleted and is removed.
+The number of filenames for a file can be seen using the ‘ls -l’ command.
+The number following the file permissions indicates the number of linked
+filenames. The following screenshot shows that filename1 and filename2
+are to linked files with one of the file denoted by the 2 (in this case the  same file, but they could be to completely different files), the file not link is a single file denoted by the 1.
+```sh
+ls -l
+```
+
+total 2432
+-rw-r--r-- 2 stewart stewart 1241088 2009-01-23 15:26 filename1
+-rw-r--r-- 2 stewart stewart 1241088 2009-01-23 15:26 filename2
+-rw-r--r-- 1 stewart stewart 0 2009-01-23 15:26 not\_link
+Note that whilst the two files appear to occupy 1.2Mb each the actual space used is only 1.2Mb in total as the file only exists once.
+du -h
+1.2M
+The default for the ln command is a hard link. Assuming filename1 already exists filename2 is created using:
+ln filename1 filename2
+
+• Soft Link
+A soft link is sometimes referred to as a symbolic link or symlink. A
+filename created as a soft link is a special file that has the pathname of
+the file to redirect to. Behind the scenes when you try and access a symlink
+it just goes to the filename referred to instead.
+In the following example a file has been created called original file with
+a soft link to that same file called softlink tofile. As you can see the ls
+command makes it clear that this is a link through the l at the beginning
+of the file permissions and due to the reference notation after the filename.
+ls -l
+total 440
+-rw-r--r-- 1 stewart stewart 446464 2009-01-23 15:21 original_file
+lrwxrwxrwx 1 stewart stewart 13 2009-01-23 15:20 softlink_tofile -> original_file
+Note that with a soft link the permissions to the link file are set to full access as the user is contstrained by the permissions on the original file. Also note that if the filesize of the original file changes the link will remain the same (on this system 13 bytes).
+If the link is deleted then this will have no impact on the original file, but if the original file is deleted this will result in a broken link. The example below shows how removing the original file results in a error "No such file or directory".
+
+9
+
+$ rm original_file
+$ ls -l
+total 0
+lrwxrwxrwx 1 stewart stewart 13 2009-01-23 15:20 softlink_tofile -> original_file
+$ cat softlink_tofile
+cat: softlink_tofile: No such file or directory
+The -s option is used on the ln command to create a softlink.
+ln -s original_file softlink_tofile
+Note that if original file does not exist then the soft link will be
+created anyway. An attempt to read it will give the error message we
+
+encountered earlier, but an attempt to write to the file can create origi-
+nal file.
+
+• Pitfalls while using links
+– There are some things that you need to be aware of, particularly
+when using softlinks.
+– Some programs (e.g. Apache) can be configured to not follow soft
+links (from a security
+– When creating backup files you need to be aware of how the particular
+backup program / tool
+– Using one method the program may not backup the file referenced
+resulting in an incomplete backup of the
+– Using another method the program may end up backing up both as
+individual files using double the space for that
+– Using the second method of the above could result in the file being
+restored as a real file rather than as a link, breaking their connection
+– The original file could be deleted without realising that there are
+other symlinked files referring to it
+Despite these pitfalls there are many advantages to using both hard
+and soft links to provide multiple references to files.
+2.8 Result
+The linux commads for redirection of standard I/O, pipes, filters, job control
+and links in linux were studied and they were run on ArchLinux 4.10.11 and
+output was verified.
